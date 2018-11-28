@@ -12,16 +12,16 @@ Promise.map(new Array(numRequests), () => allIWant(), {
 function allIWant() {
   console.log(`Requesting All I Want for Christmas is You... #${counter++}`);
   return request
-  .post(requestUrl, {
-    form: {
-      'entry.1299052505':'All I Want for Christmas is You', 
-      'entry.1639397315': 'Mariah Carey'
-    }
-  })
-  .then(() => {
-    console.log('    Success!');
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+    .post(requestUrl, {
+      form: {
+        'entry.1299052505':'All I Want for Christmas is You', 
+        'entry.1639397315': 'Mariah Carey'
+      }
+    })
+    .then(() => {
+      console.log('    Success!');
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }
