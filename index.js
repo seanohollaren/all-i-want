@@ -1,8 +1,9 @@
 const request = require('request-promise');
 const Promise = require('bluebird');
 
-const requestUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSc46bByCUYFvKtOiKfdOr83jnSNwVhx2I6hOa-SoG9JEZAAhg/formResponse';
+// number of times to request song
 const numRequests = 1000;
+const requestUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSc46bByCUYFvKtOiKfdOr83jnSNwVhx2I6hOa-SoG9JEZAAhg/formResponse';
 let counter = 0;
 
 Promise.map(new Array(numRequests), () => allIWant(), {
@@ -11,6 +12,7 @@ Promise.map(new Array(numRequests), () => allIWant(), {
 
 function allIWant() {
   console.log(`Requesting All I Want for Christmas is You... #${counter++}`);
+  
   return request
     .post(requestUrl, {
       form: {
