@@ -1,7 +1,7 @@
 const request = require('request-promise');
 const Promise = require('bluebird');
 
-// number of times to request song
+// amount of Christmas joy to spread
 const numRequests = 1000;
 const requestUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSc46bByCUYFvKtOiKfdOr83jnSNwVhx2I6hOa-SoG9JEZAAhg/formResponse';
 let counter = 0;
